@@ -3,13 +3,12 @@ import { galleryItems } from "./gallery-items.js";
 
 console.log(galleryItems);
 
-const refs = {
-list: document.querySelector(".gallery"),
-};
-const imagesMarkup = createImagesMarkup(galleryItems);
-// console.log(imagesMarkup);
+const markingPlace = document.querySelector(".gallery");
 
-refs.list.insertAdjacentHTML("beforeend", imagesMarkup);
+const imagesMarkup = createImagesMarkup(galleryItems);
+
+
+markingPlace.insertAdjacentHTML("beforeend", imagesMarkup);
 
 function createImagesMarkup(items) {
 return items
@@ -29,7 +28,7 @@ return items
    .join("");
 }
 
-refs.list.addEventListener("click", onCreateBigImage);
+markingPlace.addEventListener("click", onCreateBigImage);
 
 function onCreateBigImage(evt) {
 evt.preventDefault();
