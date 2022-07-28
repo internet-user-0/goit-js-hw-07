@@ -17,7 +17,6 @@ return items
    <img
       class="gallery__image"
       src="${preview}"
-      data-source="${original}"
       alt="${description}"
    />
    </a>
@@ -27,7 +26,7 @@ return items
    .join("");
 }
 
-const gallery = new SimpleLightbox(".gallery a", {
+new SimpleLightbox(".gallery a", {
    captionSelector: "img",
    captionData: "title",
    captionPosition: "bottom",
