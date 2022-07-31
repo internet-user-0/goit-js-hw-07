@@ -32,9 +32,9 @@ markingPlace.addEventListener("click", onCreateBigImage);
 
 function onCreateBigImage(evt) {
 evt.preventDefault();
-if (!evt.target.classList.contains("gallery__link")) {
+if (!evt.target.classList.contains("gallery__image")) {
    return;
-   }
+   };
 const instance = basicLightbox.create(
    `<img src="${evt.target.dataset.source}">`,
    {
